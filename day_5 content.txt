@@ -1,0 +1,140 @@
+day_5
+
+functions:for code reusiability we use functions.
+let say we want to use a praticular program mutliple tym in our program instead od writing a same code many times we can write once include that inside a function and can call the function where ever we need it
+classification:
+1)predefined functions
+2)userdefined functions
+
+Types:
+1)functions without argument, without return value
+2)functions without arugment, with return value
+3)functions with arugment, with return value
+4)fuctions with arugment,without rerturn value
+
+Examples for types:
+
+#without argument,without return value
+def multi():
+    n1=int(input("number"))
+    n2=int(input("number"))
+    n3=int(input("number"))
+    prod=n1*n2*n3
+    print(prod)
+multi()
+
+o/p:
+number5
+number8
+number2
+80
+
+#withot argument,without return value
+def multi():
+    n1=int(input("number"))
+    n2=int(input("number"))
+    n3=int(input("number"))
+    prod=n1*n2*n3
+    print(prod)
+multi()
+
+res=multi()
+print()
+
+o/p:
+number5
+number8
+number2
+80
+number5
+number8
+number2
+80
+
+#with argument,without return value
+#static input
+def multi(n1,n2,n3):
+   prod=n1*n2*n3
+   print(prod)
+multi(2,6,4)
+o/p:
+48
+
+#user input
+def multi(a,b,c):
+    prod=a*b*c
+    print(prod)
+
+n1=int(input("number 1: "))
+n2=int(input("number 2: "))
+n3=int(input("number 3: "))
+multi(n1,n2,n3)
+o/p:
+number 1: 5
+number 2: 6
+number 3: 3
+90
+
+#with argument,with return value
+#static input
+def multi(n1,n2,n3):
+    prod=n1*n2*n3
+    return prod
+res=multi(2,4,5)
+print(res)
+0/p:
+40
+
+
+#user input
+def multi(a,b,c):
+    prod=a*b*c
+    return prod
+n1=int(input("enter 1: "))
+n2=int(input("enter 2: "))
+n3=int(input("enter 3: "))
+res=multi(n1,n2,n3)
+print(res)
+
+o/p:
+enter 1: 3
+enter 2: 5
+enter 3: 8
+120
+
+
+#Recursion /Recursive function:
+
+*A function which calls itself is called recursive function
+*This concept is called "recurison"
+
+def display():
+    n=int(input("enter a number"))
+    if n==1:
+        display()
+    else:
+        print("over")
+display()
+
+#Recursion function
+def fact(n):
+    if n==0:
+        return 1
+    return n*fact(n-1)
+
+result=fact(5)
+print(result)
+
+
+n=int(input("enter number:"))
+a=0
+b=1
+sum=0
+count=1
+
+while(count<=n):
+    print(sum,end=" ")
+    count +=1
+    a=b
+    b=sum
+    sum=a+b

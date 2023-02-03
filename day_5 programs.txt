@@ -1,0 +1,103 @@
+day_5
+programs:
+
+import random as r
+x="i love sweets"
+print(r.sample(x,2))
+
+#everytime it gives different samples
+import random as r
+a=[1,2,3,4,5,6]
+r.shuffle(a)
+print(a)
+
+print(r.choice(b))
+
+
+a=r.random()
+print(a)
+
+#will return random number between 0.0 to 1.0
+#0.0 includes 1.0 excludes
+print(r.randint(20,30))
+
+a=[10,20,30,40,50]
+print(r.choice(a,k=10))
+
+#try with big number
+s="hello good day"
+print(r.choices(s,k=3))
+
+print(r.uniform(5,10))
+#returns any random number
+#between
+
+
+#to findout aii functions in a module
+x=dir(r)
+print(z)
+
+
+#display whole year calendar
+import calendar
+
+print("full calendar")
+print(calendar.calendar(2002))
+
+import calendar
+print("particular month")
+print(calendar.month(2021,3))
+
+
+print("set first day of the week")
+calendar.setfirstweekday(calendar.TUESDAY)
+print(calendar.month(2021,8))
+
+
+import datetime
+a=datetime.datetime.now()
+print(a)
+
+sv=a.strftime("%y")
+fv=a.strftime("%Y")
+
+print("year short version",sv)
+print("Year full version",fv)
+--------------------------------------------------------------
+1)lemons program by using functions type1?
+
+gods=5
+eachgod=4
+lemons=20
+if gods*eachgod>lemons:
+    print("excess",gods*eachgod-lemons)
+elif gods*eachgod<lemons:
+    print("less",lemons-gods*eachgod)
+else:
+    print("enough")
+
+o/p:
+enough
+
+2) find factors of the given number using functions type 2?
+
+def factor():
+    n=int(input("enter a number for  factors"))
+    l=[]
+    for i in range(1,n=1):
+        if n%i==0:
+            l.append(i)
+    return l
+p=factor()
+print("factors are:",p )
+
+o/p:
+enter a number for their factors8
+the factors are: [1, 2, 4, 8]
+
+
+
+
+
+
+
