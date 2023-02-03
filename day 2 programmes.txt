@@ -1,0 +1,147 @@
+Day-2 :
+
+
+1) Bitwise operators:-
+O's and 1's
+Some operations if u do like dz it will be faster like-compressive data.
+Sending data in network to network. 0-1 or On Off or true false.
+1)Bitwise And(&)
+2)Bitwise or(|)
+3)Bitwise not(!)
+4)Negaction(~)
+5)Bitwise Xor(^)
+6)Left shift(<<) or Right shift(>>)
+
+Examples:-
+10&4
+4
+10|4
+14
+5^6
+3
+10<<2
+40
+10>>2
+2
+-------------------------------‐---------‐---‐
+2)Multiple inputs in single line using map functions:-
+
+n=int(input("size"))
+a=list(map(int,input("numbers ").strip().split()))[:n]
+Print(a)
+O/P:
+size5
+numbers 1 18 39 43 22
+1,18,39,43,22
+
+•without strip aslo it works
+-----‐---------------------------------------‐
+3)end,sep functions:-
+• end means in single line
+•sep means it separates the line by using some character
+
+Examples:-
+1)print("its","a","good","day")
+   Print("all","is","good")
+O/P:-
+It's a good day
+all is good
+
+2)print("its","a","good","day",end='*')
+   Print("all","is","good")
+O/P:-
+It's a good day*all is good
+
+3)print("its","a","good",'day',end= )
+   Print("all",'is','good')
+O/P:-
+It's a good day all is good
+
+4)print("its",'a','good','day',end=' ')
+   Print("all",'is','good',sep="**",end=' ')
+O/P:-
+It's a good day all**is**good
+‐--------------------------------------------‐
+4)Control /Conditional statements:-
+  •if
+  •if-else
+  •elif
+   •else-if-ladder
+   •Nested-if
+Examples:-
+
+* if:-
+  t=30
+     if t>26:
+         Print("yes")
+O/P:-
+yes
+
+*if-else:-
+t=24
+   if t>26:
+      Print("yes")
+   else:
+      Print("No")
+O/P:-
+No
+
+*elif:-
+t=26
+   if t>26:
+      Print("yes")
+   elif t==26:
+       Print ("its equal ")
+O/P:-
+Its equal
+
+*elif:-
+t=23
+if t>26:
+    Print ("yes")
+elif t==26:
+    Print("its equal ")
+else:
+    Print("not>26 not equal also")
+O/P:-
+not>26 not equal aslo
+
+*else-if-ladder:-
+t=25
+   if t>26:
+       Print("yes")
+   elif t==26:
+       Print("its equal ")
+    elif t<26:
+       Print ("its less")
+O/P:-
+Its less
+
+*Nested-if:-
+  t=55
+   if t>26:
+     if t==30:
+         Print("yes")
+      else:
+         Print("not 50")
+      else:
+         Print("not>26")
+O/P:-
+not 50
+---‐-----------------------------------------‐
+
+5)Loops:-
+•while loop:
+   i=1
+    While i<=10:
+              Print(i)
+               i=i+1
+
+•range: sequence of numbers
+for i in range (1,11):
+       Print(i)
+O/P:  1,11
+
+for j in range (2,11,2):
+       Print (j)
+O/P: 2,11,2
