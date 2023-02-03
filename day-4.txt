@@ -1,0 +1,130 @@
+Day_4 content:
+
+*Dictionay:
+ 
+ d={n:n*n for n in range(1,5)}
+print(d)
+
+
+#CALCULATING PRODUCT PRICE for 5 units
+old={'rice':60,'dhal':120,'oil':150}
+new={produt:price*5 for (product,price)in
+     old.items()}
+print(new)
+
+
+#WITH CHECKS
+real={'sam':24,'angle':18,'kumar':35}
+now={name:age for (name,age) in real.items()
+     if age>20}
+print(now)
+
+O\P:
+{1: 1, 2: 4, 3: 9, 4: 16}
+
+{'rice': 300, 'dhal': 600, 'oil': 750}
+
+{'sam': 24, 'kumar': 35}
+
+#import random
+
+import random
+d={random.randint(1,20)}
+print(d)
+
+O/p:
+{10}
+
+#keys with values from two iterable-zip function.
+L1=['a','b','c']
+L2=[1,2,3]
+d={a:b for (a,b) in zip (L1,L2)}
+print(d)
+
+o/p:
+{'a': 1, 'b': 2, 'c': 3}
+--------------------------------------------------------------
+STRINGS:
+n="hi i'am "sy\via""
+syntax error:invalid error
+n="hi i'am"
+n
+"hi i'am
+nm="hi i\'am'
+sytanx error
+m="hi i'am'
+m
+"hi i'am"
+
+CONGATE:
+s1+S2
+
+REPETITION:
+S1*3
+--------------------------------------------------------------
+STRING OPERATIONS:
+s.upper()
+s.lower()ors.casefold()
+s.capitalize()
+s.replace('h','a')
+s.strip()
+s.split(),s.split(','),S.split('a')
+s.center(31,'*'),s.center(width,fillchar)
+        will fix total length them fix string in center and fill other empty space with the fillchar.
+s.count('a')
+s.count('a',5,len(s))----5-beginning and till end of str it will checked
+s.endswith('a',o,len(s))--I check string ends with a or not
+s.find('a',o,len(s))---cheek a and returns index value of first occurrence of
+a.index('a',7,len(s))frm 7 to end where a there returns 
+first occurrence of thst characteres index
+s.islower/s.isupper/s.istitle()--all words start be
+caps/max(s)--returns greater char like a>b>c...>z
+min(s)--space is lesser than a<b<c...
+s.startswith('hello',o,len(s)
+s.rfind('a',o,len(s))---from reverse first occurrence or last occurrence
+--------------------------------------------------------------
+MUTABLE vs IMMUTABLE:
+
+Mutable-can be changed after creation.
+ 1)List
+ 2)set
+ 3)Dictionary
+
+Immutable-can't be changed after creation
+ 1)Int
+ 2)Float
+ 3)string
+ 4)Boolean
+ 5)Tuple
+ 
+Example:
+s=100
+s
+100
+id(s)
+1536551292240
+s=s+s
+s
+200
+id(s)
+1536551295440
+s={2,6,9}
+id(s)
+1536592365824
+s.remove(10)
+s
+{9, 6}
+id(s)
+1536592365824
+s.update([16,29])
+s
+{16, 6, 9, 29}
+id(s)
+1536592365824
+
+
+
+
+
+
+

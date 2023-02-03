@@ -1,0 +1,95 @@
+Day_4 programs:
+
+Dictionary:
+
+1)Create a list with 8 customer names display a dictionary which has customer names along with discounts for them from a particular shop.
+
+import random
+cust=["sam","kavya","smith","vijay","nikhi","vyshu","navya","ganni"]
+cust_dict={names:random.randint(1,100) for names in cust}
+print(cust_dict)
+
+o\p:
+{'sam': 32, 'kavya': 69, 'smith': 14, 'vijay': 68, 'nikhi': 73, 'vyshu': 31, 'navya': 33, 'ganni': 85}
+--------------------------------------------------------------
+
+2)Create a list with 5 students names display a dictionary which has student names along with their marks in a examination.
+
+L1=['navya','bhanu','vyshu','krishna','murthy']
+L2=[450,487,421,399,350]
+d={a:b for (a,b) in zip(L1,L2)}
+print(d)
+
+o\p:
+{'navya': 450, 'bhanu': 487, 'vyshu': 421, 'krishna': 399, 'murthy': 350}
+--------------------------------------------------------------
+3)Get a string as a input along with a character findout and display whether the particular is present in string.
+
+s=input("enter a string")
+a=input("enter a character")
+if a in s:
+    print("present in string")
+else:
+    print("its not present in string")
+
+o/p:
+enter a stringBhanu
+enter a characterx
+its not present in string
+
+
+Another method:
+
+s=input("enter a string")
+a=input("enter a character")
+c=0
+for i in s:
+    if i==a:
+        print("present in string")
+        c=1
+if c==0:
+    print("its not present in string")
+
+o/p:
+enter a stringBhanu
+enter a characterB
+present in string
+--------------------------------------------------------------4)check whether the given string is palindrome or not.
+
+s=input("enter a string")
+c=0
+if s==s[::-1]:
+    print("yes")
+    c=1
+if c==0:
+    print("no")
+    
+o\p:
+
+.enter a stringeye
+ yes
+
+.enter a stringbhanu
+ no
+--------------------------------------------------------------
+5)After getting a input and check your string contains space4s and print out.
+
+s=input("enter a string")
+c=0
+for i in s:
+    if i==" ":
+        c=c+1
+if c>0:
+    print("yes there is a space",c)
+if c<0:
+    print("no")
+
+o\p:
+enter a stringbhanu susmitha
+yes there is a space 1
+    
+
+
+
+
+
