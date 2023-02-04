@@ -1,0 +1,146 @@
+Day_6 programs:
+
+Exception:
+1)
+a=100
+b=0
+
+try:#u r telling this may hv error,u try
+    print(a/b)
+
+#except Exception:#u saying if error thr i handle
+    print("cant divide any number by zero")
+
+except Exception as e:
+     print("please note,number cant be divided by zero",e)
+#this will print error aslo
+#to check your prg execution goes till end or get
+     print("bye")
+ o/p:
+ please note,number cant be divided by zero division by zero
+bye
+
+2)
+
+a=10
+b=0
+
+
+try:
+    print("resource open")
+    print(a/b)
+
+except Exception as e:
+    print("Dont give a second number as zero",e)
+
+finally:#will get execute if thr is error or not
+    print("Resource closed")
+o/p:
+
+resource open
+Dont give a second number as zero division by zero
+Resource closed
+
+3)
+
+#like specialise doctors
+#for those specific error only those exception
+#blocks will get executed
+a=10
+try:
+    b=int(input("enter the number"))
+    print("resource open")
+    print(a/b)
+except ZeroDivisionError as e:
+    print("Please note, number cant be divided by zero")
+except ValueError as e:
+    print("INvalid input",e)
+except EXception as e:#if not any above errors
+    print("other error")
+finally:
+    print("Resource closed")
+o/p:
+#1
+enter the number0
+resource open
+Please note, number cant be divided by zero
+Resource closed
+#2
+enter the number10.5
+INvalid input invalid literal for int() with base 10: '10.5'
+Resource closed
+#3
+enter the numberb
+INvalid input invalid literal for int() with base 10: 'b'
+Resource closed
+
+#raise used to interrupt normal prg flow and raise
+x=105
+if x%2!=0:
+    raise Exception("X shud b even number")
+else:
+    print("X is even number...Correct"
+o/p:
+Traceback (most recent call last):
+  File "C:/Users/PC-23/AppData/Local/Programs/Python/Python310/exception.py", line 64, in <module>
+    raise Exception("X shud b even number")
+Exception: X shud b even number
+
+class computer:         #class definition
+    def config(self):    #config is a function
+        print("Yes")    
+lenova=computer()      #object1
+lenova.config()
+dell=computer()        #object2
+dell.config()
+o/p:
+Yes
+Yes
+
+class Employee:
+    def __init__(self,name,id):
+        self.id=id
+        self.name=name
+
+    def display(self):
+        print("ID: %d\nName: %s" % (self.id,self.name))
+
+
+emp1=Employee("John",101)
+emp2=Employee("David",102)
+
+emp1.display()
+emp2.display()
+o/p:
+ID: 101
+Name: John
+ID: 102
+Name: David
+
+#variables and var access in class and method
+class computer():
+    a=10
+    b=20
+    print("class varible inside class",a)
+
+    def config(self):    #config is a function
+        c=100
+        print("Yes")
+        print("Instance access",self.b)
+
+lenova=computer()     #object1
+print(lenova.a)
+print(lenova.a+lenova.b)
+dell=computer()       #object2
+print("dell",dell.a)
+lenova.config()
+o/p:
+Class variable inside class 10
+10
+30
+dell 10
+Yes
+Instance access 20
+
+
+

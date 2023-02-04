@@ -1,0 +1,19 @@
+Day_6 content:
+ EXCEPTION HANDLING:
+ *when there is exception, the developer does not want interpution or disturbance in program flow
+  to achieve this we are using "Exception Handling".
+
+Oops(OBJECT ORIENTED PROGRAMMING STRUCTURE):
+*Its an efficent concept use in all programming concepts like java and python.
+*For multiple reasons we use Oops concept.
+ For example data sercurtiy,hiding data,reuseability.
+
+#Class:
+*its a blue print.ex:birds,laptops.
+#Object:
+*its a thing create based on class.
+NOTE:
+*one class can have multiple objects.
+Examples:
+ #Brids is the class.parrort,peacock,sparrow are objects.
+ #laptop is the class and lenova,hp,dell are objects.
