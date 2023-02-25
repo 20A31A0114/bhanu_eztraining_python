@@ -1,0 +1,266 @@
+lambda function:
+It is called as anonyomus function,when we want to use function concept alone without using a function name there we apply a lambda function.
+
+#Anonymous function
+
+L=[1,2,3]
+
+r=map(lambda x:x+x,L)
+print(list(r))
+#map - helps to create iteration,it returns the map  
+
+res=map(lambda n:pow(n,2),L)
+print(list(res))
+name="sam"
+(lambda name:print(name))(name)
+OUTPUT:
+[2, 4, 6]
+[1, 4, 9]
+sam
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Write a program after creating a list with even numbers within the range 1 to 15 now apply a lambda function and create a new list which should have square roots of a elements?
+
+#1
+L=[2,4,6,8,10,12,14]
+r=map(lambda x:x**(1/2),L)
+print(list(r))
+O/P:-
+[1.4142135623730951, 2.0, 2.449489742783178, 2.8284271247461903, 3.1622776601683795, 3.4641016151377544, 3.7416573867739413]
+
+#2
+l=[]
+for i in range(1,15):
+    if i%2==0:
+        l.append(i)
+r=map(lambda x:pow(x,1/2),l)
+print(list(r))
+O/P:-
+[1.4142135623730951, 2.0, 2.449489742783178, 2.8284271247461903, 3.1622776601683795, 3.4641016151377544, 3.7416573867739413]
+
+#3
+from math import sqrt
+l=[]
+for i in range(1,15):
+    if i%2==0:
+        l.append(i)
+print(l)
+r=map(lambda x:sqrt(x),l)
+print(list(r))
+O/P:-
+[2, 4, 6, 8, 10, 12, 14]
+[1.4142135623730951, 2.0, 2.449489742783178, 2.8284271247461903, 3.1622776601683795, 3.4641016151377544, 3.7416573867739413]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Four pillars of Oops:
+->Abstraction
+->En capsulation
+->Inheritance
+->Polymorphism
+
+ABSTRACTION:-
+Hidding the implementation part showing what is only  required for the user is called ABSTRACTION.
+EXAMPLE:Exe file
+we can make class or method as abstract,opposite to abtract is concrete 
+
+PROGRAMM METHOD:-
+from abc import ABC,abstractmethod
+class abstractdemo(ABC):
+    @abstractmethod #called decorator to
+    #make the method(function) abstract one
+    def display(self):
+        None
+        @abstractmethod
+        def show(self):
+            None
+#changing abstract to concrete
+class demo(abstractdemo):
+    def display(self):
+        print("Abstraction method")
+    def show(self):
+        print("2nd function")
+obj=demo()
+obj.display()
+obj.show()
+OUTPUT:
+Abstraction method
+2nd function
+
+ENCAPSULATION:-
+Binding data and function into a single entity.
+Public---- one class info can be accessed by any other class
+Private---- can used where it is declared/no in inheritected class
+Protected---can be accessed only where it got declared---whichever class inherited from this class there also we can use
+
+INHERITANCE:-
+Base class and derived class 
+ Derived class eill inherit properties of base class
+Base class-parent class
+Derived class-child class
+TYPES OF 
+1)Single inheritance
+2)mutiple inheritance
+3)multy level inheritance
+4)Hirarical inheritance
+5)HYbrid inheritance
+-------------------------------------------------------------------------------------------------------------------
+PROGRAMM METHOD FOR SIMPLE INHERITANCE:-
+#one parent and one child class
+
+class parent:              #Base class
+    def display(self):
+        print("parent class")
+
+#Derived class
+class child(parent):     #child inherits properties
+    def show(self):
+        print("chlid class")
+
+c=child()
+c.display()   #c is object for child class
+c.show()
+OUTPUT:-
+parent class
+chlid class
+
+EXAMPLE FOR SIMPLE INHERITANCE:-
+class A:
+    n=30
+
+class B(A):
+    def calc(self):
+        c=self.n+70
+        print(c)
+
+obj=B()
+obj.calc()
+OUTPUT:-
+100
+-------------------------------------------------------------------------------------------------------------------
+PROGRAMM METHOD FOR MULTIPLE INHERITANCE:-
+#two classes - one child - like mom,dad ---child
+#inheritance properties of mom and dad
+class mom:                    #BASE CLASS 1
+    def mdisplay(self):
+        print("mom class")
+class dad:                    #BASE CLASS 2
+    def ddisplay(self):
+        print("dad class")
+class child(mom,dad):         #DERIVED CLASS
+    def cdisplay(self):
+        print("child class")
+c1=child()
+c1.cdisplay()
+c1.mdisplay()
+c1.ddisplay()
+OUTPUT:-
+child class
+mom class
+dad class
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+PROGRAMM METHOD FOR MULTY LEVEL INHERITANCE:-
+#one parent and one child class
+class grandparent:
+    def display(self):
+        print("grandparent class")
+class parent(grandparent):
+    def show(self):
+        print("parent class")
+class child(parent):
+    def printing(self):
+        print("child class")
+c=child()          #c is the object for child class----object
+c.display()
+c.show()
+c.printing()
+OUTPUT:-
+grandparent class
+parent class
+child class
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+PROGRAMM METHOD FOR HIRARICAL INHERITANCE:-
+#one base class and multiple child class
+#objects shud be create for child class individually
+class parent:               #base class
+    def pdisplay(self):      #method
+        print("parent class")
+class child1(parent):        #derived class1 for child1
+    def c1show(self):
+        print("child1 class")
+class child2(parent):        #derived class 2 for child2
+    def c2show(self):
+        print("child2 class")
+c1=child1()
+c1.c1show()
+c1.pdisplay()
+c2=child2()
+c2.c2show()
+c2.pdisplay()
+OUTPUT:-
+child1 class
+parent class
+child2 class
+parent class
+-------------------------------------------------------------------------------------------------------------------PROGRAMM METHOD FOR HYBRID INHERITANCE:-
+class parent:
+    def pdisplay(self):
+        print("parent class")
+class child1(parent):
+    def c1show(self):
+        print("child1 class")
+class child2(parent):
+    def c2show(self):
+        print("child2 class")
+class kid1(child1):
+    def k1display(self):
+        print("kid1 class")
+class kid2(child1):
+    def k2display(self):
+        print("kid2 class")
+class kidd1(child2):
+    def k1show(self):
+        print("kidd1 class")
+class kidd2(child2):
+    def k2show(self):
+        print("kidd2 class")
+c1=kid1()
+c1.k1display()
+c1.c1show()
+c1.pdisplay()
+c2=kid2()
+c2.k2display()
+c2.c1show()
+c2.pdisplay()
+c3=kidd1()
+c3.k1show()
+c3.c2show()
+c3.pdisplay()
+c4=kidd2()
+c4.k2show()
+c4.c2show()
+c4.pdisplay()
+OUTPUT:-
+kid1 class
+child1 class
+parent class
+kid2 class
+child1 class
+parent class
+kidd1 class
+child2 class
+parent class
+kidd2 class
+child2 class
+parent class
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
